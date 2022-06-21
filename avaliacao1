@@ -1,0 +1,151 @@
+//EXIBIR OPÇÕES NA TELA
+// RODANDO
+//FICÇÃO CIENTIFICA 
+const prompt = require('prompt-sync')()
+console.clear();
+
+
+// Continue...
+
+function continuar() {
+  console.log()
+  prompt(`Pressione ENTER para continuar...`)
+}
+
+
+let opcoesArray = [
+"Mago".toLocaleUpperCase(),
+"Elfo".toLocaleLowerCase(), 
+"Druida".toLocaleUpperCase(),
+"Globlin".toLocaleUpperCase()];
+
+let personagem = ''
+let energia = 0;
+let fim = 0;
+
+
+while (energia<=100 != fim ) {
+     
+        console.log(`selecione:
+        0. Mago
+        1. Elfo
+        2. Druida
+        3. Globlin
+        `);
+      
+        let decisoes = +prompt();
+
+
+        if (decisoes == 0) {
+            (decisoes = "Mago".toLowerCase());
+            (decisoes = opcoesArray[0]);
+            energia+=50;
+            console.log (`Sua energia é: `+energia+`  `)
+            
+            console.log(`selecione:
+
+            0. Espada
+            1. Adaga
+            2. Flexa
+            3. Machado
+            `);
+                      
+
+        }
+        else if (decisoes == 1) {
+            (decisoes = "Elfo");
+            (decisoes = opcoesArray[1]);
+            console.log(opcoesArray[1]);
+            console.log ('Metade de sua Jornada será superada com meus conselhos')
+            continue
+
+            
+        }
+
+        else if (decisoes == 2) {
+            (decisoes = "Druida");
+            (decisoes = opcoesArray[2]);
+            console.log(opcoesArray[2]);
+            
+            
+            console.log ('Metade de sua Jornada será superada com meus conselhos')
+            continue
+
+
+        }
+        else if (decisoes == 3) {
+          (decisoes = "Globlin");
+          (decisoes = opcoesArray[3]);
+          console.log(opcoesArray[3]);
+          console.log(`Você perdeu nunca confie no Globlin`)
+          break
+
+        }
+        console.log (decisoes);
+
+        let decisoesArmas = +prompt('Escolha sua Arma Sagrada');  
+
+        let opcoesArmas = [
+          "Espada".toLocaleUpperCase(),
+          "Adaga".toLocaleLowerCase(), 
+          "Flexa".toLocaleUpperCase(),
+          "Machado".toLocaleUpperCase()];
+          if (decisoesArmas == 0) {
+            (decisoesArmas = "Espada".toLowerCase());
+            (decisoesArmas = opcoesArmas[0]);
+            energia+=50;
+            console.log (`Sua energia é: `+energia+`  `)
+            console.log ('Espada!')
+            
+            console.log(`selecione:
+
+            0. Espada
+            1. Adaga
+            2. Flexa
+            3. Machado
+            `);
+                      
+
+        }
+        else if (decisoesArmas == 1) {
+            (decisoes = "Adaga");
+            (decisoes = opcoesArmas[1]);
+            console.log(opcoesArmas[1]);
+            energia+=50;
+            console.log (`Sua energia é: `+energia+`  `)
+            console.log ('Adaga!')
+            continuar()
+
+            
+        }
+
+        else if (decisoesArmas == 2) {
+            (decisoesArmas = "Flexa");
+            (decisoesArmas = opcoesArmas[2]);
+            console.log(opcoesArmas[2]);
+            energia+=50;
+            console.log (`Sua energia é: `+energia+`  `)
+            console.log ('Flexa!')
+            continuar()
+
+
+        }
+        else if (decisoesArmas == 3) {
+            (decisoesArmas = "Machado");
+            (decisoesArmas = opcoesArmas[3]);
+            console.log(opcoesArmas[3]);
+            energia+=50;
+            console.log (`Sua energia é: `+energia+`  `)
+            console.log(`Machado !`)
+            continuar()
+
+        }   
+        
+          console.log (decisoesArmas);
+          console.log ("Sua aventura chegou ao fim");
+          break
+        
+  
+    
+
+}
